@@ -3,9 +3,11 @@ import HeroScene from "@/components/HeroScene";
 import GlitchText from "@/components/GlitchText";
 import { Button } from "@/components/ui/button";
 import Section from "@/components/Section";
+import AnimatedProjectCard from "@/components/AnimatedProjectCard";
 import { Link } from "wouter";
 import { ArrowRight, Download } from "lucide-react";
 import { projects } from "@/lib/data";
+import { motion } from "framer-motion";
 
 export default function Home() {
   return (
@@ -22,22 +24,29 @@ export default function Home() {
           </Section>
           
           <Section delay={0.2}>
-            <h1 className="text-6xl md:text-9xl font-display font-bold leading-none tracking-tighter mb-8">
-              CREATIVE <br />
-              <GlitchText text="DEVELOPER" className="text-stroke text-white" />
-            </h1>
+            <div className="relative mb-8">
+              <div className="flex items-start gap-8">
+                <div>
+                  <h1 className="text-6xl md:text-9xl font-display font-bold leading-none tracking-tighter">
+                    <GlitchText text="SINCHANA" className="text-stroke text-white" /> <br />
+                    <GlitchText text="NAGARAJ" className="text-stroke text-white" />
+                  </h1>
+                </div>
+                {/* Profile Picture removed from header — placed near contact below */}
+              </div>
+            </div>
           </Section>
           
           <Section delay={0.4}>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-12 font-light">
-              Crafting immersive digital experiences with code and chaos. 
-              Specializing in <span className="text-secondary">3D interactions</span>, 
-              <span className="text-accent"> motion graphics</span>, and high-performance web applications.
+              Aspiring AI & ML Engineer | <span className="text-secondary">Generative AI & Agentic AI</span> Enthusiast | Open-Source Contributor.
+              Building intelligent systems and exploring <span className="text-secondary">agentic AI applications</span>,
+              <span className="text-accent"> generative AI & prompt engineering</span>, <span className="text-accent">mobile development</span>, and <span className="text-primary">UI/UX design</span>.
             </p>
           </Section>
           
           <Section delay={0.6}>
-            <div className="flex flex-wrap gap-4">
+            <div className="relative flex flex-wrap gap-4 items-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-primary text-black hover:bg-white rounded-none border-2 border-primary font-bold tracking-wider text-base h-14 px-8 uppercase transition-all duration-300">
                   Start Project <ArrowRight className="ml-2 w-5 h-5" />
@@ -48,6 +57,7 @@ export default function Home() {
                   View Work
                 </Button>
               </Link>
+              {/* Profile picture removed per request */}
             </div>
           </Section>
         </div>
@@ -76,24 +86,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {projects.slice(0, 2).map((project, index) => (
-              <Section key={project.id} delay={index * 0.2}>
-                <div className="group relative overflow-hidden border border-white/10 bg-card/50 aspect-video cursor-pointer">
-                  <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 mix-blend-overlay" />
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="object-cover w-full h-full transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
-                  />
-                  <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/90 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-20">
-                    <h3 className="text-2xl font-bold font-display text-white mb-2">{project.title}</h3>
-                    <div className="flex gap-2">
-                      {project.tags.map(tag => (
-                        <span key={tag} className="text-xs font-mono bg-white/10 px-2 py-1 text-primary">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </Section>
+              <AnimatedProjectCard key={project.id} project={project} index={index} />
             ))}
           </div>
         </div>

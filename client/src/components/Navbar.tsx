@@ -21,7 +21,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 py-6 flex justify-between items-center">
         <Link href="/">
           <a className="text-2xl font-display font-bold tracking-tighter hover:text-primary transition-colors duration-300 uppercase">
-            J<span className="text-primary">.</span>DEV
+            S<span className="text-primary">.</span>DEV
           </a>
         </Link>
 

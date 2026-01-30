@@ -39,23 +39,23 @@ export default function Skills() {
 
       <Section delay={0.6} className="mt-20">
         <div className="p-8 border border-dashed border-white/20 bg-card/10 text-center">
-          <h3 className="text-2xl font-display font-bold mb-4">TOOLKIT & SOFTWARE</h3>
+          <h3 className="text-2xl font-display font-bold mb-4">TOOLS & PLATFORMS</h3>
           <div className="flex flex-wrap justify-center gap-4 font-mono text-sm text-muted-foreground">
              <span>VS Code</span>
              <span>•</span>
-             <span>Figma</span>
+             <span>Git & GitHub</span>
              <span>•</span>
-             <span>Blender</span>
+             <span>Google Cloud</span>
              <span>•</span>
-             <span>Cinema 4D</span>
+             <span>Arduino IDE</span>
              <span>•</span>
-             <span>Adobe Creative Suite</span>
+             <span>PHP & MySQL</span>
              <span>•</span>
-             <span>Git</span>
+             <span>Generative AI</span>
+             <span>•</span>
+             <span>Google Teachable Machine</span>
              <span>•</span>
              <span>Docker</span>
-             <span>•</span>
-             <span>Vercel</span>
           </div>
         </div>
       </Section>

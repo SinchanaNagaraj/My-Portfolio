@@ -10,7 +10,7 @@ export default function Experience() {
       {/* Experience Timeline */}
       <Section>
         <h1 className="text-5xl md:text-8xl font-display font-bold mb-16">
-          CAREER <span className="text-primary">LOGS</span>
+          EXPERIENCE &<span className="text-primary">SKILLS</span>
         </h1>
       </Section>
 
@@ -29,6 +29,13 @@ export default function Experience() {
               <p className="text-lg text-white/80 font-light max-w-2xl">
                 {job.description}
               </p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                {(job.tools || ["Android Studio", "Git", "GitHub", "Java", "Python"]).map(tag => (
+                  <span key={tag} className="text-xs font-mono border border-white/10 px-2 py-1 text-white/60">
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </Section>
         ))}

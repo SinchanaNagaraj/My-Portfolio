@@ -7,7 +7,7 @@ export default function Education() {
     <div className="pt-32 pb-20 container mx-auto px-6">
       <Section>
         <h1 className="text-5xl md:text-8xl font-display font-bold mb-16 text-center">
-          KNOWLEDGE <span className="text-accent">BASE</span>
+          EDUCATION &<span className="text-accent">ACHIEVEMENTS</span>
         </h1>
       </Section>
 
@@ -44,17 +44,40 @@ export default function Education() {
         ))}
       </div>
 
-      {/* Certifications or extra Section */}
-      <Section delay={0.3} className="mt-20 text-center">
-        <p className="font-mono text-muted-foreground text-sm">
-          // CONSTANTLY LEARNING NEW TECHNOLOGIES
+      {/* Additional Info */}
+      <Section delay={0.3} className="mt-20">
+        <div className="p-8 border border-white/10 bg-card/30 backdrop-blur-sm">
+          <h3 className="text-2xl font-display font-bold mb-6">KEY COURSEWORK</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {[
+              "Artificial Intelligence & Machine Learning",
+              "Data Structures & Algorithms",
+              "Database Management Systems",
+              "Web Development (PHP, MySQL)",
+              "Embedded Systems & IoT",
+              "Technical Communication"
+            ].map((course, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <span className="text-primary font-bold mt-1">→</span>
+                <span className="text-white font-light">{course}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      {/* Certifications */}
+      <Section delay={0.4} className="mt-12 text-center">
+        <p className="font-mono text-muted-foreground text-sm mb-6">
+          // CONTINUOUS LEARNING & PROFESSIONAL DEVELOPMENT
         </p>
-        <div className="flex justify-center gap-8 mt-8 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-          {/* Placeholders for logos */}
-          <div className="w-12 h-12 bg-white/10 rounded-full" />
-          <div className="w-12 h-12 bg-white/10 rounded-full" />
-          <div className="w-12 h-12 bg-white/10 rounded-full" />
-          <div className="w-12 h-12 bg-white/10 rounded-full" />
+        <div className="inline-block bg-card/30 border border-white/10 p-8 text-center">
+          <p className="text-white mb-4 font-light">
+            Certified in <strong>Introduction to AI</strong> | 
+            Attended <strong>Agentic AI Workshop</strong> | 
+            Participated in <strong>Prompt War (Generative AI Competition)</strong> | 
+            Completed <strong>Git & GitHub Bootcamp</strong>
+          </p>
         </div>
       </Section>
     </div>

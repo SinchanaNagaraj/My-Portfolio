@@ -48,8 +48,8 @@ export default function Contact() {
         <Section delay={0.2}>
           <div className="space-y-12">
             <p className="text-xl text-muted-foreground font-light leading-relaxed">
-              Have a project in mind or just want to talk about the latest in tech? 
-              I'm currently available for freelance work and collaborations.
+              Have a project in mind or want to discuss AI, ML, or web development? 
+              I'm always open to collaborations and learning opportunities.
             </p>
 
             <div className="space-y-6">
@@ -59,7 +59,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-mono text-muted-foreground">EMAIL</p>
-                  <a href="mailto:hello@jdev.com" className="text-xl font-bold hover:text-primary transition-colors">hello@jdev.com</a>
+                  <a href="mailto:sinchananagaraj2005508@gmail.com" className="text-xl font-bold hover:text-primary transition-colors">sinchananagaraj2005508@gmail.com</a>
                 </div>
               </div>
 
@@ -69,7 +69,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-mono text-muted-foreground">PHONE</p>
-                  <p className="text-xl font-bold">+1 (555) 000-0000</p>
+                  <a href="tel:+918660871654" className="text-xl font-bold hover:text-primary transition-colors">+91 8660871654</a>
                 </div>
               </div>
 
@@ -79,7 +79,20 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-mono text-muted-foreground">LOCATION</p>
-                  <p className="text-xl font-bold">San Francisco, CA</p>
+                  <p className="text-xl font-bold">Mysore, Karnataka, India</p>
+                </div>
+              </div>
+
+              <div className="space-y-3 pt-4 border-t border-white/10">
+                <p className="text-sm font-mono text-muted-foreground">SOCIAL PROFILES</p>
+                <div className="flex gap-4">
+                  <a href="https://linkedin.com/in/sinchana-nagaraj" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors font-bold underline">
+                    LinkedIn
+                  </a>
+                  <span className="text-white/20">•</span>
+                  <a href="https://github.com/SinchanaNagaraj" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition-colors font-bold underline">
+                    GitHub
+                  </a>
                 </div>
               </div>
             </div>

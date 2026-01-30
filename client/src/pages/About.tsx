@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import GlitchText from "@/components/GlitchText";
 import { skills } from "@/lib/data";
 import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
 
 export default function About() {
   return (
@@ -16,18 +17,17 @@ export default function About() {
         <Section delay={0.2}>
           <div className="space-y-6 text-lg md:text-xl text-muted-foreground font-light leading-relaxed">
             <p>
-              <strong className="text-white">I'm a digital architect</strong> obsessed with the intersection of design and technology. 
-              Born on the internet, raised by documentation, and fueled by caffeine.
+              <strong className="text-white">I'm an aspiring AI & ML engineer</strong> with hands-on experience in generative AI, agentic AI, mobile app development, and open-source contributions. I'm passionate about building impactful solutions aligned with global standards and national missions.
             </p>
             <p>
-              My philosophy is simple: <span className="text-white">Boring is a bug.</span> 
-              I don't just build websites; I create digital hallucinations that leave a lasting impression. 
-              Whether it's a 3D product showcase or a high-traffic web application, I bring the same level of energy and precision.
+              With internship experience in UI/UX design, generative AI, and mobile app development, I combine technical expertise with strong communication and presentation skills to deliver impactful solutions. My focus areas include agentic AI applications for intelligent task automation and service optimization.
             </p>
             <p>
-              When I'm not coding, I'm probably experimenting with generative art, producing electronic music, or exploring cyberpunk aesthetics in photography.
+              <strong className="text-white">My Specializations:</strong> Generative AI & Prompt Engineering, Agentic AI Applications, Mobile App Development (Flutter), UI/UX Design, Open-Source Contributions, and Strategic Planning & Presentation Design.
             </p>
           </div>
+
+          {/* Profile picture removed — now shown only on Home page */}
         </Section>
 
         <Section delay={0.4}>
@@ -68,15 +68,15 @@ export default function About() {
         </Section>
       </div>
 
-      <Section delay={0.6} className="mt-24">
+        <Section delay={0.6} className="mt-24">
         <h3 className="text-2xl font-display font-bold mb-8 border-b border-white/10 pb-4">
-          WHAT I DO
+          MY EXPERTISE
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { title: "Frontend Dev", desc: "React, Next.js, and modern CSS architecture." },
-            { title: "Creative Coding", desc: "WebGL, Three.js, and interactive animations." },
-            { title: "UI/UX Design", desc: "Figma prototyping and design systems." }
+            { title: "Generative AI & Agentic AI", desc: "Specialized in prompt engineering, agentic AI architecture, intelligent task orchestration, and model deployment for automated systems." },
+            { title: "Mobile Development", desc: "Flutter-based mobile app development with focus on UI/UX, backend integration, and service optimization." },
+            { title: "UI/UX Design", desc: "User-centered design approach with hands-on experience in modern design tools and strategic design planning." }
           ].map((item, i) => (
             <div key={i} className="p-6 border border-white/5 hover:border-primary/50 transition-colors bg-card/20 group">
               <h4 className="text-xl font-bold font-display mb-3 text-white group-hover:text-primary transition-colors">
